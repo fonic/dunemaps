@@ -20,7 +20,7 @@
  * 
  */
 
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "tools.h"
 
 int horizontalInvert( SDL_Surface *surface ) {

@@ -187,7 +187,8 @@ std::string StringFile::decodeString(std::string text) {
                                case 0x62: out += (unsigned char) 223 /*"ss"*/; break;
                                default: {
                                             char tmp[20];
-                                            sprintf_s(tmp,"---Unknown char:%X---",special);
+                                            //sprintf_s(tmp,"---Unknown char:%X---",special);
+                                            sprintf(tmp,"---Unknown char:%X---",special);
                                             out += tmp;
                                         } break;
                            };
@@ -199,7 +200,8 @@ std::string StringFile::decodeString(std::string text) {
             default: {
                          if((databyte & 0x80) == 0x80) {
                              char tmp[20];
-                             sprintf_s(tmp,"---Unknown char:%X---",databyte);
+                             //sprintf_s(tmp,"---Unknown char:%X---",databyte);
+                             sprintf(tmp,"---Unknown char:%X---",databyte);
                              out += tmp;
                          } else {
                              out += databyte;

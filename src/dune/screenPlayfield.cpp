@@ -10,7 +10,7 @@
 #include "map.h"
 #include "minimap.h"
 
-#include "panelSurface.h"
+#include "../panelSurface.h"
 
 #include <typeinfo>
 

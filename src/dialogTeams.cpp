@@ -10,10 +10,10 @@
 
 #include "dialogTeams.h"
 #include "dialogTeam.h"
-#include "stdafx.h"
-#include "engine/scenario.h"
-#include "engine/house.h"
-#include "engine/team.h"
+#include "dune/stdafx.h"
+#include "dune/engine/scenario.h"
+#include "dune/engine/house.h"
+#include "dune/engine/team.h"
 
 //Do not add custom headers
 //wxDev-C++ designer will remove them

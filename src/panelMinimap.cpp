@@ -10,7 +10,7 @@
 #include "appDuneMaps.h"
 #include "panelSurface.h"
 #include "panelMinimap.h"
-#include "stdafx.h"
+#include "dune/stdafx.h"
 
 #include "dune/minimap.h"
 #include "dune/screenPlayfield.h"

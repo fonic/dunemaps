@@ -9,7 +9,7 @@
 ///------------------------------------------------------------------
 
 #include "dialogHouses.h"
-#include "stdafx.h"
+#include "dune/stdafx.h"
 #include "dune/engine/house.h"
 #include <algorithm>
 

@@ -1,16 +1,17 @@
+#ifndef STDAFX_H
+#define STDAFX_H
 
-#include<windows.h>
-
-#include<vector>
-#include<string>
-#include<map>
-#include<sstream>
-#include<iostream>
-#include<iomanip>
+//#include <windows.h>
+#include <vector>
+#include <string>
+#include <map>
+#include <sstream>
+#include <iostream>
+#include <iomanip>
 
 using namespace std;
 
-#include <sdl.h>
+#include <SDL.h>
 #include "types.h"
 
 #include "graphics/scale/scalebit.h"
@@ -47,3 +48,5 @@ inline word	readWord( const void *buffer ) {
 #include "resources.h"
 
 #include "dune.hpp"
+
+#endif // STDAFX_H

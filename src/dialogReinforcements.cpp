@@ -10,9 +10,9 @@
 
 #include "dialogReinforcements.h"
 #include "dialogReinforcement.h"
-#include "stdafx.h"
-#include "engine/scenario.h"
-#include "engine/house.h"
+#include "dune/stdafx.h"
+#include "dune/engine/scenario.h"
+#include "dune/engine/house.h"
 
 //Do not add custom headers
 //wxDev-C++ designer will remove them

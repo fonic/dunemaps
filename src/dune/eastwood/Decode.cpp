@@ -115,7 +115,8 @@ int Decode::decode80(const unsigned char *image_in, unsigned char *image_out,uns
 	    c++;
 	} else {
 	    char error[256];
-	    sprintf_s(error,"file contains unknown format80 command: %x\n",*readp);
+	    //sprintf_s(error,"file contains unknown format80 command: %x\n",*readp);
+	    sprintf(error,"file contains unknown format80 command: %x\n",*readp);
 	    throw(Exception(LOG_ERROR, "Decode", error));
 	}
     };

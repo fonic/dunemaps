@@ -19,15 +19,17 @@
 #include "dialogNewScenario.h"
 #include "dialogChoam.h"
 
-#include "stdafx.h"
+#include "dune/stdafx.h"
 #include "dune/engine/objects/object.h"
 #include "dune/engine/objects/structure.h"
 #include "dune/engine/objects/unit.h"
-#include "eastwood/PakFile.h"
+#include "dune/eastwood/PakFile.h"
 #include "dune/engine/scenario.h"
 
 #include <algorithm>
-#include "../rev.h"
+//#include "../rev.h"
+const char *SVNREV = "$WCREV$";
+const char *SVNDATE = "$WCDATE$";
 
 //Do not add custom headers
 //wxDev-C++ designer will remove them

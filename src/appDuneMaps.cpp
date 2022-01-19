@@ -9,7 +9,7 @@
 
 #include "appDuneMaps.h"
 #include "frameDuneMaps.h"
-#include "stdafx.h"
+#include "dune/stdafx.h"
 
 IMPLEMENT_APP(cDuneMapsApp)
 

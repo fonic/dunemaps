@@ -12,8 +12,8 @@
 #include "frameDuneMaps.h"
 #include "panelMinimap.h"
 
-#include "stdafx.h"
-#include "screenPlayfield.h"
+#include "dune/stdafx.h"
+#include "dune/screenPlayfield.h"
 #include "appDuneMaps.h"
 //Do not add custom headers between
 //Header Include Start and Header Include End
@@ -73,7 +73,8 @@ cPanelSurface::cPanelSurface(wxWindow *parent, wxWindowID id, const wxPoint &pos
 
 cPanelSurface::~cPanelSurface() {
 	mTimer->Stop();
-	Sleep(400);
+	//Sleep(400);
+	usleep(400*1000);
 	delete mTimer;
 	delete mPopupTerrain;
 	delete mPopupUnit;

@@ -317,7 +317,8 @@ void IniFile::setStringValue(std::string section, std::string key, std::string v
 void IniFile::setIntValue(std::string section, std::string key, int value)
 {
 	char tmp[20];
-	sprintf_s(tmp,"%d",value);
+	//sprintf_s(tmp,"%d",value);
+	sprintf(tmp,"%d",value);
 	setStringValue(section, key, tmp);
 }
 

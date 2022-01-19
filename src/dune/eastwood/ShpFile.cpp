@@ -60,7 +60,8 @@ void ShpFile::readIndex()
 
 	if( fileSize < (uint32_t) ((_numFiles * 4) + 2 + 2)) {
 	    char error[256];
-	    sprintf_s(error, "Shp-File-Header is not complete! Header should be %d bytes big, but Shp-File is only %d bytes long.",(_numFiles * 4) + 2 + 2, fileSize);
+	    //sprintf_s(error, "Shp-File-Header is not complete! Header should be %d bytes big, but Shp-File is only %d bytes long.",(_numFiles * 4) + 2 + 2, fileSize);
+	    sprintf(error, "Shp-File-Header is not complete! Header should be %d bytes big, but Shp-File is only %d bytes long.",(_numFiles * 4) + 2 + 2, fileSize);
 	    throw(Exception(LOG_ERROR, "ShpFile", error));
 	}
 
@@ -73,7 +74,8 @@ void ShpFile::readIndex()
 	    if(i > 0) {
 		char error[256];
 		_index[i-1].endOffset = _index[i].startOffset - 1;
-		sprintf_s(error, "The File with Index %d, goes until byte %d, but this SHP-File is only %d bytes big.",
+		//sprintf_s(error, "The File with Index %d, goes until byte %d, but this SHP-File is only %d bytes big.",
+		sprintf(error, "The File with Index %d, goes until byte %d, but this SHP-File is only %d bytes big.",
 			i, _index[i-1].endOffset, fileSize);
 		if(_index[i-1].endOffset > fileSize)
 		    throw(Exception(LOG_ERROR, "ShpFile", error));
@@ -144,7 +146,8 @@ std::vector<uint8_t> ShpFile::getImage(uint16_t fileIndex, uint8_t &sizeX, uint8
 
 	default:
 	    char error[256];
-	    sprintf_s(error, "Type %d in SHP-Files not supported!", type);
+	    //sprintf_s(error, "Type %d in SHP-Files not supported!", type);
+	    sprintf(error, "Type %d in SHP-Files not supported!", type);
 	    throw(Exception(LOG_ERROR, "ShpFile", error));
     }
 
@@ -175,7 +178,8 @@ SDL_Surface *ShpFile::getSurfaceArray(uint8_t tilesX, uint8_t tilesY, ...) {
 	tiles[i] = va_arg( arg_ptr, uint32_t );
 	if(getIndex(tiles[i]) >= _numFiles) {
 	    char error[256];
-	    sprintf_s(error, "getSurfaceArray(): There exist only %d files in this *.shp.",_numFiles);
+	    //sprintf_s(error, "getSurfaceArray(): There exist only %d files in this *.shp.",_numFiles);
+	    sprintf(error, "getSurfaceArray(): There exist only %d files in this *.shp.",_numFiles);
 	    throw(Exception(LOG_ERROR, "ShpFile", error));
 	}
     }

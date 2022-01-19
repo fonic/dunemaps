@@ -9,7 +9,7 @@
 ///------------------------------------------------------------------
 
 #include "dialogChoam.h"
-#include "stdafx.h"
+#include "dune/stdafx.h"
 #include "dune/engine/scenario.h"
 #include <wx/numdlg.h>
 

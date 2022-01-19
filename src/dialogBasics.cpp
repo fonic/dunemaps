@@ -10,9 +10,9 @@
 
 
 #include "dialogBasics.h"
-#include "stdafx.h"
-#include "engine/scenario.h"
-#include "screenPlayfield.h"
+#include "dune/stdafx.h"
+#include "dune/engine/scenario.h"
+#include "dune/screenPlayfield.h"
 
 //Do not add custom headers
 //wxDev-C++ designer will remove them

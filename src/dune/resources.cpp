@@ -11,7 +11,7 @@
 #include "eastwood/CpsFile.h"
 #include "eastwood/WsaFile.h"
 
-#include "graphics\tools.h"
+#include "graphics/tools.h"
 #include <wx/msgdlg.h>
 
 string mapDirections[8] = {
@@ -150,7 +150,12 @@ byte *cResources::fileRead( string pFile, size_t	&pFileSize, bool pData ) {
 
 		// Allocate buffer, and read the file into it
 		fileBuffer = new byte[ pFileSize ];
-		if(fileStream->read( (char*) fileBuffer, pFileSize ) == false) {
+		/*if(fileStream->read( (char*) fileBuffer, pFileSize ) == false) {
+			delete fileBuffer;
+			fileBuffer = 0;
+		}*/
+		fileStream->read( (char*) fileBuffer, pFileSize );
+		if (!fileStream) {
 			delete fileBuffer;
 			fileBuffer = 0;
 		}
@@ -512,7 +517,7 @@ bool cResources::pakLoad( string pFile, bool pData, string pFileLoadAs ) {
 	if( _Paks.find( pFileLoadAs ) != _Paks.end() )
 		pakUnload( pFileLoadAs );
 
-	transform( pFileLoadAs.begin(), pFileLoadAs.end(), pFileLoadAs.begin(), tolower );
+	transform( pFileLoadAs.begin(), pFileLoadAs.end(), pFileLoadAs.begin(), ::tolower );
 
 	_Paks.insert( pair< string, PakFile*>( pFileLoadAs, tmpFile ) );
 	return true;

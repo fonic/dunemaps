@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "house.h"
 #include "scenario.h"
 #include "scenarioAmiga.h"

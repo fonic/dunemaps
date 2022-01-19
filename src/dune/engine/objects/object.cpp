@@ -1,6 +1,6 @@
 #include "../../stdafx.h"
 #include "object.h"
-#include "..//scenario.h"
+#include "../scenario.h"
 #include "../../map.h"
 #include "mapCell.h"
 

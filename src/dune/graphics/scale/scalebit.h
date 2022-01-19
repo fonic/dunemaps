@@ -33,6 +33,10 @@
  * - derivative works of the program are allowed.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef __SCALEBIT_H
 #define __SCALEBIT_H
 
@@ -41,3 +45,6 @@ void scale(unsigned scale, void* void_dst, unsigned dst_slice, const void* void_
 
 #endif
 
+#ifdef __cplusplus
+}
+#endif

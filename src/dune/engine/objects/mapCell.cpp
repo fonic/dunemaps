@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../../stdafx.h"
 #include "../mapGenerator.h"
 #include "object.h"
 #include "structure.h"

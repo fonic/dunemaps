@@ -12,7 +12,7 @@
 #include "frameDuneMaps.h"
 #include "panelMinimap.h"
 
-#include "stdafx.h"
+#include "dune/stdafx.h"
 #include "dune/minimap.h"
 #include "dune/engine/scenario.h"
 

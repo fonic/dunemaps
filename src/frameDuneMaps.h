@@ -31,6 +31,8 @@
 #include <wx/toolbar.h>
 ////Header Include End
 
+#include "dune/stdafx.h"
+
 class cPanelSurface;
 class cPanelMinimap;
 class cHouse;

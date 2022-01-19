@@ -36,6 +36,8 @@
 #include <wx/notebook.h>
 ////Header Include End
 
+#include "dune/stdafx.h"
+
 ////Dialog Style Start
 #undef cDialogBasics_STYLE
 #define cDialogBasics_STYLE wxCAPTION | wxSYSTEM_MENU | wxDIALOG_NO_PARENT | wxMINIMIZE_BOX | wxCLOSE_BOX

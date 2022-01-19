@@ -1,8 +1,8 @@
 #ifndef	EASTWOOD_stdafx_H
 #define	EASTWOOD_stdafx_H
 
-#include <windows.h>
-#include <sdl.h>
+//#include <windows.h>
+#include <SDL.h>
 #include <algorithm>
 #include <istream>
 #include <sstream>

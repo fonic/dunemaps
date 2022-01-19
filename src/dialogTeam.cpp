@@ -9,7 +9,7 @@
 ///------------------------------------------------------------------
 
 #include "dialogTeam.h"
-#include "stdafx.h"
+#include "dune/stdafx.h"
 #include "dune/engine/house.h"
 
 //Do not add custom headers
