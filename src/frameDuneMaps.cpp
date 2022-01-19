@@ -128,7 +128,7 @@ void cFrameDuneMaps::CreateGUIControls()
 	wxMenu *ID_MNU_FILE_1001_Mnu_Obj = new wxMenu(0);
 	ID_MNU_FILE_1001_Mnu_Obj->Append(ID_MNU_NEWSCENARIO_1005, wxT("&New Scenario"), wxT(""), wxITEM_NORMAL);
 	ID_MNU_FILE_1001_Mnu_Obj->AppendSeparator();
-	
+
 	wxMenu *ID_MNU_LOADSCENARIO_1002_Mnu_Obj = new wxMenu(0);
 	ID_MNU_LOADSCENARIO_1002_Mnu_Obj->Append(ID_MNU_FROMINI_7000, wxT("From Ini"), wxT(""), wxITEM_NORMAL);
 	ID_MNU_LOADSCENARIO_1002_Mnu_Obj->Append(ID_MNU_FROMAMIGA_7001, wxT("From Amiga"), wxT(""), wxITEM_NORMAL);

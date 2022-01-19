@@ -257,3 +257,6 @@ SDL_Surface *ShpFile::getSurfaceArray(const uint8_t tilesX, const uint8_t tilesY
     return pic;
 }
 
+uint16_t ShpFile::getNumFiles() {
+	return _numFiles;
+}

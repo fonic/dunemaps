@@ -61,14 +61,17 @@ class ShpFile : public Decode
 	SDL_Surface *getSurfaceArray(const uint8_t tilesX, const uint8_t tilesY, ...);
 	SDL_Surface *getSurfaceArray(const uint8_t tilesX, const uint8_t tilesY, const uint32_t *tiles);
 
-	inline uint16_t getNumFiles() { return _numFiles; }
+	// For some reason inline function won't work, return a completely different
+	// value while function in .cpp works fine (?!)
+	//inline uint16_t getNumFiles() { return _numFiles; }
+	uint16_t getNumFiles();
 
     private:
 	std::vector<uint8_t> getImage(const uint16_t fileIndex, uint8_t &sizeX, uint8_t &sizeY);
 	void readIndex();
 
 	std::vector<ShpFileEntry> _index;
-	uint16_t _numFiles;	
+	uint16_t _numFiles;
 };
 
 

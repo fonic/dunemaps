@@ -26,9 +26,12 @@ string mapDirections[8] = {
 };
 
 cResources::cResources( string pPath ) {
-	if( pPath.size() )
+	/*if( pPath.size() )
 		if( pPath.substr( pPath.size(), 1) != "\\" )
-			pPath.append("\\");
+			pPath.append("\\");*/
+	if( pPath.size() )
+		if( pPath.substr( pPath.size(), 1) != "/" )
+			pPath.append("/");
 
 	_Exe = 0;
 	_icons = 0;
@@ -100,10 +103,9 @@ cResources::~cResources() {
 
 void cResources::resourcePrepare() {
 	
-	_Exe = new cResourceExe( "Dune2.EXE" );
-
+	_Exe = new cResourceExe( "DUNE2.EXE" );
 	if(!_Exe->isOpen()) {
-		wxMessageBox("Dune2.Exe not found in data directory!", "Data not found");
+		wxMessageBox("DUNE2.EXE not found in data directory!", "Data not found");
 		exit(0);
 	}
 
@@ -140,6 +142,7 @@ byte *cResources::fileRead( string pFile, size_t	&pFileSize, bool pData ) {
 	filePathFinal << pFile;
 
 	// Attempt to open the file
+	std::cout << "Loading file: " << filePathFinal.str() << std::endl;
 	fileStream = new ifstream ( filePathFinal.str().c_str(), ios::binary );
 	if(fileStream->is_open() != false) {
 
@@ -557,6 +560,7 @@ istream	*cResources::fileOpen( string pFilename ) {
 	map< string, PakFile*>::iterator	pakIT;
 
 	// Iterate over each PAK looking for 'filename'
+	std::cout << "Loading file: " << pFilename << " (from PAK)" << std::endl;
 	for( pakIT = _Paks.begin(); pakIT != _Paks.end(); ++pakIT ) {
 
 		pak = pakIT->second;
@@ -752,8 +756,9 @@ void cResources::shpLoad( string pFileName ) {
 	string			 st = *str;
 	istringstream	 is(st);
 
+	std::cout << "Loading file: " << pFileName << std::endl;
 	_shp = new ShpFile( is ,  _paletteIBM->getPalette() );
-	
+
 	word shpFiles =	_shp->getNumFiles();
 
 	word count2 = _dataSHP.size();
