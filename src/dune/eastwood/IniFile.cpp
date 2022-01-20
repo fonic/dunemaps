@@ -440,7 +440,7 @@ bool IniFile::SaveChangesTo(std::string filename) {
 bool IniFile::SaveChangesTo(SDL_RWops *file) {
 	CommentEntry *curEntry = FirstLine;
 	
-	bool error = false;
+	/*bool error = false;
 	unsigned int written;
 	while(curEntry != NULL) {
 		written = SDL_RWwrite(file, curEntry->CompleteLine.c_str(), 1, curEntry->CompleteLine.size());
@@ -450,8 +450,28 @@ bool IniFile::SaveChangesTo(SDL_RWops *file) {
 		if((written = SDL_RWwrite(file,"\r\n",2,1)) != 1)
 			error = true;
 		curEntry = curEntry->nextEntry;
+	}*/
+	bool first_line = true;
+	bool error = false;
+	unsigned int written;
+	for( ; curEntry != NULL; curEntry = curEntry->nextEntry) {
+		if(curEntry->CompleteLine == "") // skip empty lines
+			continue;
+
+		if(!first_line && curEntry->CompleteLine.rfind("[", 0) == 0) // insert empty line before section start
+			if((written = SDL_RWwrite(file,"\r\n",2,1)) != 1)
+				error = true;
+
+		written = SDL_RWwrite(file, curEntry->CompleteLine.c_str(), 1, curEntry->CompleteLine.size());
+		if(written != curEntry->CompleteLine.size())
+			error = true;
+
+		if((written = SDL_RWwrite(file,"\r\n",2,1)) != 1)
+			error = true;
+
+		first_line = false;
 	}
-	
+
 	return !error;
 }
 

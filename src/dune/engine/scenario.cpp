@@ -431,10 +431,15 @@ void cScenario::iniSave( string pFile ) {
 	ini.setIntValue("BASIC", "WinFlags", _mapWinFlags  );
 
 	// [MAP] Section
-	ini.setStringValue("MAP", "Field", _mapField );
+	/*ini.setStringValue("MAP", "Field", _mapField );
 	ini.setStringValue("MAP", "Bloom", _mapBloom );
-	ini.setStringValue("MAP", "Special", _mapSpecial );
-
+	ini.setStringValue("MAP", "Special", _mapSpecial );*/
+	if (_mapField != "")
+		ini.setStringValue("MAP", "Field", _mapField );
+	if (_mapBloom != "")
+		ini.setStringValue("MAP", "Bloom", _mapBloom );
+	if (_mapSpecial != "")
+		ini.setStringValue("MAP", "Special", _mapSpecial );
 	ini.setIntValue("MAP", "Seed", _mapSeed );
 
 	// [HOUSENAME] Section
