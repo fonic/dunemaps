@@ -133,7 +133,8 @@ void cDialogChoam::mButtonDoneClick(wxCommandEvent& event) {
 	choams->clear();
 
 	for( int i = 0; i < WxListCtrl1->GetItemCount(); ++i ) {
-		int count = atoi( WxListCtrl1->GetItemText( i).mb_str() );
+		//int count = atoi( WxListCtrl1->GetItemText( i).mb_str() );
+		int count = atoi( WxListCtrl1->GetItemText(i, 1).mb_str() );
 
 		if(count != 0 ) {
 			sChoam choam;
@@ -159,5 +160,7 @@ void cDialogChoam::mButtonCancelClick(wxCommandEvent& event) {
  * WxButton1Click
  */
 void cDialogChoam::WxButton1Click(wxCommandEvent& event) {
-	
+	for( int i = 0; i < WxListCtrl1->GetItemCount(); ++i ) {
+		WxListCtrl1->SetItem(i, 1, wxString("0", wxConvUTF8) );
+	}
 }
