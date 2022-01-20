@@ -1,5 +1,5 @@
 /* XPM */
-static char *Self_cDialogTeams_XPM[]={
+static const char *Self_cDialogTeams_XPM[]={
 /* Self_cDialogTeams */
 "32 32 686 2",
 "      c None",

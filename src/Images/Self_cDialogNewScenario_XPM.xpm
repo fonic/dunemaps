@@ -1,5 +1,5 @@
 /* XPM */
-static char *Self_cDialogNewScenario_XPM[]={
+static const char *Self_cDialogNewScenario_XPM[]={
 /* Self_cDialogNewScenario */
 "32 32 686 2",
 "      c None",

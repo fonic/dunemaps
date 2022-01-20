@@ -1,5 +1,5 @@
 /* XPM */
-static char *Self_cDialogReinforcements_XPM[]={
+static const char *Self_cDialogReinforcements_XPM[]={
 /* Self_cDialogReinforcements */
 "32 32 686 2",
 "      c None",

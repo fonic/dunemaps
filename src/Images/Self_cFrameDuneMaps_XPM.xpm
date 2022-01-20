@@ -1,5 +1,5 @@
 /* XPM */
-static char *Self_cFrameDuneMaps_XPM[]={
+static const char *Self_cFrameDuneMaps_XPM[]={
 /* Self_cFrameDuneMaps */
 "32 32 686 2",
 "      c None",

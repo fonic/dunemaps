@@ -1,5 +1,5 @@
 /* XPM */
-static char *Self_cDialogHouses_XPM[]={
+static const char *Self_cDialogHouses_XPM[]={
 /* Self_cDialogHouses */
 "32 32 686 2",
 "      c None",
