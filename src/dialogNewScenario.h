@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CDIALOGNEWSCENARIO_H__
-#define __CDIALOGNEWSCENARIO_H__
+#ifndef MAIN_DIALOGNEWSCENARIO_H
+#define MAIN_DIALOGNEWSCENARIO_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -80,4 +80,4 @@ class cDialogNewScenario : public wxDialog
 		void OnPaint(wxPaintEvent& event);
 };
 
-#endif
+#endif // MAIN_DIALOGNEWSCENARIO_H

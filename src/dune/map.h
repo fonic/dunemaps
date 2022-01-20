@@ -1,3 +1,6 @@
+#ifndef DUNE_MAP_H
+#define DUNE_MAP_H
+
 class cMapCell;
 
 class cMap {
@@ -67,3 +70,5 @@ public:
 		return posXYtoIndex( pX & 0x3F, pY );
 	}
 };
+
+#endif // DUNE_MAP_H

@@ -1,5 +1,5 @@
-#ifndef STDAFX_H
-#define STDAFX_H
+#ifndef DUNE_STDAFX_H
+#define DUNE_STDAFX_H
 
 //#include <windows.h>
 #include <vector>
@@ -47,6 +47,6 @@ inline word	readWord( const void *buffer ) {
 #include "resourceExe.h"
 #include "resources.h"
 
-#include "dune.hpp"
+#include "dune.h"
 
-#endif // STDAFX_H
+#endif // DUNE_STDAFX_H

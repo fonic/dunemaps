@@ -18,8 +18,8 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#ifndef __SCALE2X_H
-#define __SCALE2X_H
+#ifndef SCALE_SCALE2X_H
+#define SCALE_SCALE2X_H
 
 typedef unsigned char scale2x_uint8;
 typedef unsigned short scale2x_uint16;
@@ -64,5 +64,5 @@ static  void scale2x_mmx_emms(void)
 
 #endif
 
-#endif
+#endif // SCALE_SCALE2X_H
 

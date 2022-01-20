@@ -1,3 +1,6 @@
+#ifndef DUNE_DUNE_H
+#define DUNE_DUNE_H
+
 class cResources;
 class cScenario;
 class cHouse;
@@ -77,3 +80,5 @@ public:
 	inline cFrameDuneMaps	*frameGet() { return mFrame; }
 	inline 	void frameSet( cFrameDuneMaps *pVal ) { mFrame = pVal; }
 };
+
+#endif // DUNE_DUNE_H

@@ -18,8 +18,8 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#ifndef __SCALE3X_H
-#define __SCALE3X_H
+#ifndef SCALE_SCALE3X_H
+#define SCALE_SCALE3X_H
 
 typedef unsigned char scale3x_uint8;
 typedef unsigned short scale3x_uint16;
@@ -29,5 +29,5 @@ void scale3x_8_def(scale3x_uint8* dst0, scale3x_uint8* dst1, scale3x_uint8* dst2
 void scale3x_16_def(scale3x_uint16* dst0, scale3x_uint16* dst1, scale3x_uint16* dst2, const scale3x_uint16* src0, const scale3x_uint16* src1, const scale3x_uint16* src2, unsigned count);
 void scale3x_32_def(scale3x_uint32* dst0, scale3x_uint32* dst1, scale3x_uint32* dst2, const scale3x_uint32* src0, const scale3x_uint32* src1, const scale3x_uint32* src2, unsigned count);
 
-#endif
+#endif // SCALE_SCALE3X_H
 

@@ -1,3 +1,6 @@
+#ifndef GRAPHICS_SURFACE_H
+#define GRAPHICS_SURFACE_H
+
 struct SDL_Surface;
 
 class cVideoSurface {
@@ -30,3 +33,5 @@ public:
 	inline SDL_Surface *surfaceGet() { return _surface; }
 
 };
+
+#endif // GRAPHICS_SURFACE_H

@@ -7,8 +7,8 @@
 //
 //---------------------------------------------------------------------------
 
-#ifndef __cDuneMapsApp_h__
-#define __cDuneMapsApp_h__
+#ifndef MAIN_APPDUNEMAPS_H
+#define MAIN_APPDUNEMAPS_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -30,4 +30,4 @@ class cDuneMapsApp : public wxApp
 struct SDL_Surface;
 wxBitmap SDL_To_Bitmap(SDL_Surface *surface);
 
-#endif
+#endif // MAIN_APPDUNEMAPS_H

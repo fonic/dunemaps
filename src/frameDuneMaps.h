@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __cFrameDuneMaps_H__
-#define __cFrameDuneMaps_H__
+#ifndef MAIN_FRAMEDUNEMAPS_H
+#define MAIN_FRAMEDUNEMAPS_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -142,4 +142,4 @@ class cFrameDuneMaps : public wxFrame
 
 };
 
-#endif
+#endif // MAIN_FRAMEDUNEMAPS_H

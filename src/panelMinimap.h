@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CPANELMINIMAP_H__
-#define __CPANELMINIMAP_H__
+#ifndef MAIN_PANELMINIMAP_H
+#define MAIN_PANELMINIMAP_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -68,4 +68,4 @@ class cPanelMinimap : public wxFrame
 		void OnMouse(wxMouseEvent& event);
 };
 
-#endif
+#endif // MAIN_PANELMINIMAP_H

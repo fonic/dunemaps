@@ -1,3 +1,5 @@
+#ifndef ENGINE_HOUSE_H
+#define ENGINE_HOUSE_H
 
 class cUnit;
 class cStructure;
@@ -58,3 +60,5 @@ public:
 	void					 structureRemove( cStructure *pStructure );
 
 };
+
+#endif // ENGINE_HOUSE_H

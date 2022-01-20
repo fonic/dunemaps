@@ -33,18 +33,18 @@
  * - derivative works of the program are allowed.
  */
 
+#ifndef SCALE_SCALEBIT_H
+#define SCALE_SCALEBIT_H
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#ifndef __SCALEBIT_H
-#define __SCALEBIT_H
-
 int scale_precondition(unsigned scale, unsigned pixel, unsigned width, unsigned height);
 void scale(unsigned scale, void* void_dst, unsigned dst_slice, const void* void_src, unsigned src_slice, unsigned pixel, unsigned width, unsigned height);
-
-#endif
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif // SCALE_SCALEBIT_H

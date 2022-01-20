@@ -1,3 +1,5 @@
+#ifndef OBJECTS_MAPCELL_H
+#define OBJECTS_MAPCELL_H
 
 class cMapCell : public cObject {
 
@@ -37,3 +39,5 @@ public:
 	}
 
 };
+
+#endif // OBJECTS_MAPCELL_H

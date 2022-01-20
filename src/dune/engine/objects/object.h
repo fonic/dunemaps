@@ -1,3 +1,6 @@
+#ifndef OBJECTS_OBJECT_H
+#define OBJECTS_OBJECT_H
+
 class cMapCell;
 class cHouse;
 
@@ -44,3 +47,5 @@ public:
 
 	inline word				 healthGet()	{ return _health; }
 };
+
+#endif // OBJECTS_OBJECT_H

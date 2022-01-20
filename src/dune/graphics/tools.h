@@ -20,5 +20,9 @@
  * 
  */
 
+#ifndef GRAPHICS_TOOLS_H
+#define GRAPHICS_TOOLS_H
 
 SDL_Surface *SDL_HorizontalInvert( SDL_Surface *image);
+
+#endif // GRAPHICS_TOOLS_H

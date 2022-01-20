@@ -1,3 +1,6 @@
+#ifndef OBJECTS_STRUCTURE_H
+#define OBJECTS_STRUCTURE_H
+
 enum eStructureOptions {
 	eStructureOptions_HasChoam			= 2,
 	eStructureOptions_4					= 4,
@@ -42,3 +45,5 @@ public:
 
 	inline sStructureData *dataGet()		{ return _structData; }
 };
+
+#endif // OBJECTS_STRUCTURE_H

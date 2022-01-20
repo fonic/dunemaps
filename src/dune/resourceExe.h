@@ -1,3 +1,5 @@
+#ifndef DUNE_RESOURCEEXE_H
+#define DUNE_RESOURCEEXE_H
 
 struct sGameVersions {
 	size_t	offName;							// 'DUNE2.EXE' location
@@ -210,3 +212,5 @@ public:
 
 	string					 stringGet( size_t	pAddress );							// Takes an internal string reference ptr and returns the string
 };
+
+#endif // DUNE_RESOURCEEXE_H

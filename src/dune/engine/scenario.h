@@ -1,3 +1,6 @@
+#ifndef ENGINE_SCENARIO_H
+#define ENGINE_SCENARIO_H
+
 class cMap;
 class cMapGenerator;
 class cUnit;
@@ -114,3 +117,5 @@ public:
 	inline vector< cTeam* >			*teamsGet()			 { return &mTeams; }
 	inline vector< sChoam >			*choamGet()			 { return &mChoam; }
 };
+
+#endif // ENGINE_SCENARIO_H

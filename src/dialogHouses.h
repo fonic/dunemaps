@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CDIALOGHOUSES_H__
-#define __CDIALOGHOUSES_H__
+#ifndef MAIN_DIALOGHOUSES_H
+#define MAIN_DIALOGHOUSES_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -119,4 +119,4 @@ class cDialogHouses : public wxDialog
 		void updateValues();
 };
 
-#endif
+#endif // MAIN_DIALOGHOUSES_H

@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CDIALOGTEAM_H__
-#define __CDIALOGTEAM_H__
+#ifndef MAIN_DIALOGTEAM_H
+#define MAIN_DIALOGTEAM_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -108,4 +108,4 @@ class cDialogTeam : public wxDialog
 		void CreateGUIControls();
 };
 
-#endif
+#endif // MAIN_DIALOGTEAM_H

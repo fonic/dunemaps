@@ -1,3 +1,6 @@
+#ifndef DUNE_RESOURCES_H
+#define DUNE_RESOURCES_H
+
 struct sHouseData {
 	string houseName;
 	string houseVoice;
@@ -296,3 +299,4 @@ public:
 	PakFile							*pakGet( string pPakName );
 };
 
+#endif // DUNE_RESOURCES_H

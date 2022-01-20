@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CDIALOGCHOAM_H__
-#define __CDIALOGCHOAM_H__
+#ifndef MAIN_DIALOGCHOAM_H
+#define MAIN_DIALOGCHOAM_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -83,4 +83,4 @@ class cDialogChoam : public wxDialog
 		void CreateGUIControls();
 };
 
-#endif
+#endif // MAIN_DIALOGCHOAM_H

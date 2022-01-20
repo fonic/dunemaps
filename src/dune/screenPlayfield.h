@@ -1,3 +1,6 @@
+#ifndef DUNE_SCREENPLAYFIELD_H
+#define DUNE_SCREENPLAYFIELD_H
+
 class cMapCell;
 
 class cScreenPlayfield {
@@ -63,3 +66,5 @@ public:
 	inline void			 redrawSet() { _redraw = true; }
 
 };
+
+#endif // DUNE_SCREENPLAYFIELD_H

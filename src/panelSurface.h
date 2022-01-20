@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CPANELSURFACE_H__
-#define __CPANELSURFACE_H__
+#ifndef MAIN_PANELSURFACE_H
+#define MAIN_PANELSURFACE_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -117,4 +117,4 @@ public:
 
 };
 
-#endif
+#endif // MAIN_PANELSURFACE_H

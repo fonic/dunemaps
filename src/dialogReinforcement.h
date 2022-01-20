@@ -8,8 +8,8 @@
 ///
 ///------------------------------------------------------------------
 
-#ifndef __CDIALOGREINFORCEMENT_H__
-#define __CDIALOGREINFORCEMENT_H__
+#ifndef MAIN_DIALOGREINFORCEMENT_H
+#define MAIN_DIALOGREINFORCEMENT_H
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -112,4 +112,4 @@ class cDialogReinforcement : public wxDialog
 		void CreateGUIControls();
 };
 
-#endif
+#endif // MAIN_DIALOGREINFORCEMENT_H

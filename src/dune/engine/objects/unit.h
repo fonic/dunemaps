@@ -1,3 +1,6 @@
+#ifndef OBJECTS_UNIT_H
+#define OBJECTS_UNIT_H
+
 enum eUnitOptions {
 	_UnitOpts_AirUnitShadow			= 0x1,
 	_UnitOpts_2						= 0x2,
@@ -55,3 +58,5 @@ public:
 
 	inline sUnitData		*dataGet()		{ return _UnitData; }
 };
+
+#endif // OBJECTS_UNIT_H

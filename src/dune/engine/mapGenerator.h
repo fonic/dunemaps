@@ -1,3 +1,6 @@
+#ifndef ENGINE_MAPGENERATOR_H
+#define ENGINE_MAPGENERATOR_H
+
 enum eTerrain {
 	TERRAIN_SAND		= 0,
 	TERRAIN_DUNES		= 2,
@@ -34,3 +37,5 @@ public:
 	sMapPoint				 mapXYCorrect( sMapPoint pPoint, word pRandMax, bool pAdd80 );
 
 };
+
+#endif // ENGINE_MAPGENERATOR_H

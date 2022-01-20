@@ -1,3 +1,5 @@
+#ifndef ENGINE_TEAM_H
+#define ENGINE_TEAM_H
 
 class cTeam {
 private:
@@ -23,3 +25,5 @@ public:
 
 	inline word						 movementTypeGet()  { return _movementType; }
 };
+
+#endif // ENGINE_TEAM_H

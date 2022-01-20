@@ -1,3 +1,6 @@
+#ifndef ENGINE_SCENARIOAMIGA_H
+#define ENGINE_SCENARIOAMIGA_H
+
 class cScenarioAmiga : public cScenario {
 private:
 
@@ -19,3 +22,5 @@ public:
 	void						 iniLoad( string pFile, bool pLocalFile );
 	//void						 iniSave( string pFile );
 };
+
+#endif // ENGINE_SCENARIOAMIGA_H
