@@ -91,9 +91,11 @@ void cPanelSurface::CreateGUIControls() {
 	mPopupStructure = new wxMenu(wxT(""));mPopupStructure->Append(ID_MNU_DELETE_1009, wxT("Delete"), wxT(""), wxITEM_NORMAL);
 
 	mPopupUnit = new wxMenu(wxT(""));mPopupUnit->Append(ID_MNU_UNITROTATE_1003, wxT("Rotate"), wxT(""), wxITEM_NORMAL);
-	wxMenu *ID_MNU_STARTINGORDERS_1004_Obj = new wxMenu();
-	ID_MNU_STARTINGORDERS_1004_Obj->Append(ID_MNU_ORDER_2000, wxT("Order"), wxT(""), wxITEM_NORMAL);
-	mPopupUnit->Append(ID_MNU_STARTINGORDERS_1004, wxT("Orders"), ID_MNU_STARTINGORDERS_1004_Obj);
+	//wxMenu *ID_MNU_STARTINGORDERS_1004_Obj = new wxMenu();
+	//ID_MNU_STARTINGORDERS_1004_Obj->Append(ID_MNU_ORDER_2000, wxT("Order"), wxT(""), wxITEM_NORMAL);
+	//mPopupUnit->Append(ID_MNU_STARTINGORDERS_1004, wxT("Orders"), ID_MNU_STARTINGORDERS_1004_Obj);
+	mPopupUnitOrders = new wxMenu(wxT(""));
+	mPopupUnit->Append(ID_MNU_STARTINGORDERS_1004, wxT("Orders"), mPopupUnitOrders);
 	mPopupUnit->AppendSeparator();
 	mPopupUnit->Append(ID_MNU_DELETE_1005, wxT("Delete"), wxT(""), wxITEM_NORMAL);
 
@@ -398,7 +400,7 @@ void cPanelSurface::menuOrdersReset() {
 // Menu: Build a list of actions
 void cPanelSurface::menuOrdersBuild() {
 
-	wxMenuItem		*item = mPopupUnit->FindItem(ID_MNU_ORDER_2000);
+	/*wxMenuItem		*item = mPopupUnit->FindItem(ID_MNU_ORDER_2000);
 
 	wxMenu			*menu = item->GetMenu();
 	menu->Remove( item );
@@ -407,6 +409,11 @@ void cPanelSurface::menuOrdersBuild() {
 		sActionData *action = g_DuneEngine->resourcesGet()->actionGet(i);
 
 		menu->InsertCheckItem(i, ID_MNU_ORDER_2000 + i, action->Name );
+	}*/
+
+	for( int i = 0; i < 14; ++i ) {
+		sActionData *action = g_DuneEngine->resourcesGet()->actionGet(i);
+		mPopupUnitOrders->InsertCheckItem(i, ID_MNU_ORDER_2000 + i, action->Name );
 	}
 }
 

@@ -44,7 +44,10 @@ cDialogNewScenario::cDialogNewScenario(wxWindow *parent, wxWindowID id, const wx
 : wxDialog(parent, id, title, position, size, style)
 {
 	mOriginalSeed = g_DuneEngine->scenarioGet()->mapSeedGet();
+
+	mGUIInitialized = false;
 	CreateGUIControls();
+	mGUIInitialized = true;
 
 	mDone = false;
 }
@@ -63,6 +66,12 @@ void cDialogNewScenario::CreateGUIControls()
 
 	buttonDone = new wxButton(this, ID_BUTTONDONE, wxT("Create"), wxPoint(75, 99), wxSize(91, 25), 0, wxDefaultValidator, wxT("buttonDone"));
 
+	// FIXME: Event 'EVT_TEXT(ID_WXEDIT1,cDialogNewScenario::WxEdit1Updated)'
+	//        seems to fire while 'WxEdit1' is still being created, resulting in a
+	//        crash in 'cDialogNewScenario::WxEdit1Updated()', 'string seed = ...'
+	//        when the following line is being executed; not sure why this happens
+	//        and how to mitigate it elegantly; using flag 'mGUIInitialized' as a
+	//        workaround for now
 	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, wxT("12345"), wxPoint(126, 26), wxSize(93, 21), 0, wxDefaultValidator, wxT("WxEdit1"));
 	WxEdit1->SetMaxLength(8);
 
@@ -108,6 +117,9 @@ void cDialogNewScenario::OnPaint(wxPaintEvent& event) {
  * WxEdit1Updated
  */
 void cDialogNewScenario::WxEdit1Updated(wxCommandEvent& event) {
+	if (!mGUIInitialized)
+		return;
+
 	string seed =  string(WxEdit1->GetValue().mb_str());
 
 	g_DuneEngine->scenarioGet()->mapSeedSet( seed );

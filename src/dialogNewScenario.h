@@ -42,6 +42,7 @@ class cDialogNewScenario : public wxDialog
 		DECLARE_EVENT_TABLE();
 		size_t			mOriginalSeed;
 		bool			mDone;
+		bool			mGUIInitialized;
 
 	public:
 		cDialogNewScenario(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("DuneMaps - New Scenario"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = cDialogNewScenario_STYLE);

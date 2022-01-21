@@ -102,7 +102,8 @@ IcnFile::IcnFile(const unsigned char *bufFileData, size_t bufSize,
 }
 
 IcnFile::~IcnFile()
-{	
+{
+	delete m_tileSet;
 }
 
 size_t	IcnFile::getTileCount( uint32_t index ) {

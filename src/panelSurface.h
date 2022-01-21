@@ -64,6 +64,7 @@ class cPanelSurface : public wxPanel
 		////GUI Control Declaration Start
 		wxMenu *mPopupStructure;
 		wxMenu *mPopupUnit;
+		wxMenu *mPopupUnitOrders;
 		wxMenu *mPopupTerrain;
 		////GUI Control Declaration End
 

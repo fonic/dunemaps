@@ -417,7 +417,8 @@ void cScenario::iniSave( string pFile ) {
 	unsigned char *buffer =  new unsigned char[1];
 
 	IniFile ini( buffer, 0 );
-	delete buffer;
+	//delete buffer;
+	delete [] buffer;
 
 	// [BASIC] Section
 	ini.setStringValue("BASIC", "LosePicture", _pictureLose );

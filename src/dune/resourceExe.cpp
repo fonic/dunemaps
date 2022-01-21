@@ -26,7 +26,8 @@ cResourceExe::cResourceExe( const char *pExe ) {
 
 cResourceExe::~cResourceExe() {
 
-	delete _bufferExe;
+	//delete _bufferExe;
+	delete [] _bufferExe;
 }
 
 sExeActionData cResourceExe::actionGet( size_t pIndex ) {

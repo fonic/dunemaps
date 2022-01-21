@@ -24,6 +24,9 @@ struct sGameVersions {
 	size_t	offMovementNames;
 };
 
+// Contain changes of '#pragma pack' locally
+#pragma pack(push, 1)
+
 struct sExeHouseData {
 	#pragma pack(1)
 	dword houseName;
@@ -170,6 +173,8 @@ struct sExeActionData {
 	byte field_A;
 	byte field_B;
 };
+
+#pragma pack(pop) // #pragma pack(push, 1)
 
 class cResourceExe {
 private:

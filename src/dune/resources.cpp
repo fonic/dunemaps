@@ -89,15 +89,18 @@ cResources::~cResources() {
 	_dataSHP.clear();
 
 	delete _Exe;
-	delete _fileIconICN;
-	delete _fileIconMAP;
+	//delete _fileIconICN;
+	//delete _fileIconMAP;
+	delete [] _fileIconICN;
+	delete [] _fileIconMAP;
 	delete _icons;
 	delete _ini;
 	delete _shp;
 
 	delete _paletteIBM;
 	if(_palIBM)
-		delete _palIBM->colors;
+		//delete _palIBM->colors;
+		delete [] _palIBM->colors;
 	delete _palIBM;
 }
 
@@ -124,7 +127,8 @@ void cResources::resourcePrepare() {
 	_fileIconICN = fileRead( fileOpen( "ICON.ICN" ),  _fileIconICNSize );
 	_fileIconMAP = fileRead( fileOpen( "ICON.MAP"  ), _fileIconMAPSize );
 
-	_icons = new IcnFile( _fileIconICN, _fileIconICNSize, _fileIconMAP, _fileIconMAPSize, _paletteIBM->getPalette() );
+	//_icons = new IcnFile( _fileIconICN, _fileIconICNSize, _fileIconMAP, _fileIconMAPSize, _paletteIBM->getPalette() );
+	_icons = new IcnFile( _fileIconICN, _fileIconICNSize, _fileIconMAP, _fileIconMAPSize, _palIBM );
 
 	mapTileIDsLoad();
 	shpLoad();
@@ -158,8 +162,8 @@ byte *cResources::fileRead( string pFile, size_t	&pFileSize, bool pData ) {
 			fileBuffer = 0;
 		}*/
 		fileStream->read( (char*) fileBuffer, pFileSize );
-		if (!fileStream) {
-			delete fileBuffer;
+		if (fileStream->fail()) {
+			delete [] fileBuffer;
 			fileBuffer = 0;
 		}
 	}
@@ -513,7 +517,8 @@ bool cResources::pakLoad( string pFile, bool pData, string pFileLoadAs ) {
 	stream = new istringstream( std::string((const char*)pakData, pakSize ));
 	tmpFile = new PakFile( stream );
 
-	delete pakData;
+	//delete pakData;
+	delete [] pakData;
 	if( pFileLoadAs.size() == 0 )
 		pFileLoadAs = pFile;
 
@@ -757,7 +762,8 @@ void cResources::shpLoad( string pFileName ) {
 	istringstream	 is(st);
 
 	std::cout << "Loading file: " << pFileName << std::endl;
-	_shp = new ShpFile( is ,  _paletteIBM->getPalette() );
+	//_shp = new ShpFile( is ,  _paletteIBM->getPalette() );
+	_shp = new ShpFile( is, _palIBM );
 
 	word shpFiles =	_shp->getNumFiles();
 
@@ -825,7 +831,8 @@ SDL_Surface *cResources::wsaGet( string pFileName, size_t pFrame ) {
 
 	delete str;
 
-	WsaFile *wsa = new WsaFile( is, _paletteIBM->getPalette(), 0, 0 );
+	//WsaFile *wsa = new WsaFile( is, _paletteIBM->getPalette(), 0, 0 );
+	WsaFile *wsa = new WsaFile( is, _palIBM, 0, 0 );
 	
 	_dataWSA.insert( pair< string, WsaFile*> (pFileName, wsa ));
 	
@@ -856,7 +863,8 @@ SDL_Surface *cResources::CpsGet( string fileName ) {
 	string		st = *str;
 	istringstream is(st);
 
-	CpsFile		*Cps		= new CpsFile( is, _paletteIBM->getPalette() );
+	//CpsFile		*Cps		= new CpsFile( is, _paletteIBM->getPalette() );
+	CpsFile		*Cps		= new CpsFile( is, _palIBM );
 	SDL_Surface *surface	= Cps->getSurface();
 
 	delete Cps;
@@ -881,7 +889,8 @@ bool cResources::IniLoad( string fileName, bool pLocalFile ) {
 	delete _ini;
 	_ini 		= new IniFile( ini, _fileIniSize );
 	
-	delete ini;
+	//delete ini;
+	delete [] ini;
 
 	if(stream || ini)
 		return true;

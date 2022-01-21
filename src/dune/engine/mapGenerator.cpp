@@ -142,8 +142,15 @@ void cMapGenerator::generateTerrainAverage() {
 			mapHere		= mapRow[X];
 			mapUpHere	= mapRowPrevious[X];
 			
-			mapUpRight	= mapRowPrevious[X+1];
-			mapRight	= mapRow[X+1];
+			//mapUpRight	= mapRowPrevious[X+1];
+			//mapRight	= mapRow[X+1];
+			if(X < 0x3F) { // FIXME: needs to stay within boundaries, but not sure if this is correct
+				mapUpRight	= mapRowPrevious[X+1];
+				mapRight	= mapRow[X+1];
+			} else {
+				mapUpRight	= mapHere;
+				mapRight	= mapHere;
+			}
 
 			mapDownRight= _map[ start + X + 0x41 ]; // 0x104 ];
 			mapDown		= _map[ start + X + 0x40 ]; // 0x100 ];

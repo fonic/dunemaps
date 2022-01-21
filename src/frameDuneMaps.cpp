@@ -345,7 +345,9 @@ void cFrameDuneMaps::Mnusavescenario1007Click(wxCommandEvent& event) {
 void cFrameDuneMaps::Mnunewscenario1005Click(wxCommandEvent& event) {
 	cDialogNewScenario *scenario = new cDialogNewScenario(this);
 
-	scenario->Show();
+	//scenario->Show();
+	scenario->ShowModal();
+	delete scenario;
 }
 
 /*

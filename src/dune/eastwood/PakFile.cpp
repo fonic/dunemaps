@@ -95,7 +95,7 @@ std::string *PakFile::getFile(std::string fileName) {
 	_stream->read( (char*) buf, finalSize );
 	tmp->append(buf, finalSize );
 
-	delete[] buf;
+	delete [] buf;
 
 	return tmp;
 }
