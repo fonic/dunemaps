@@ -57,7 +57,7 @@ END_EVENT_TABLE()
 ////Event Table End
 
 cPanelSurface::cPanelSurface(wxWindow *parent, wxWindowID id, const wxPoint &position, const wxSize& size)
-: wxPanel(parent, id, position, size, wxFRAME_NO_TASKBAR | wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)) {
+: wxPanel(parent, id, position, size, (wxFRAME_NO_TASKBAR | wxDEFAULT_FRAME_STYLE) & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)) { // FIXME: added first set of parentheses, but not entirely sure
 	
 	mScale = 2;
 	mMouseX = mMouseY = 0;

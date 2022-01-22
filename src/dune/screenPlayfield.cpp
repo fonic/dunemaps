@@ -326,7 +326,7 @@ bool cScreenPlayfield::mapInScreen( size_t pX, size_t pY ) {
 	pX -= screenX;
 	pY -= screenY;
 
-	if( pX < 0xFFF0 || pX > 100 || pY < 0xFFF0)
+	if( pX < 0xFFF0 || pX > 100 || pY < 0xFFF0 ) // FIXME: this always evaluates to true; what was the goal here? perhaps this?: ((pX < 0xFFF0 && pX > 100) || pY < 0xFFF0) 
 		return false;
 
 	if( pY <= 0xB0 )

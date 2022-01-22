@@ -22,7 +22,7 @@ public:
 	byte					 _TurnTo,	_Target,	_Current;
 
 							 cUnitAngle() {
-								_TurnTo = _Target = _Current;
+								_TurnTo = _Target = _Current = 0; // value doesn't matter, will all be overwritten/initialized by cUnit::cUnit() -> angleSet(..., false, ...) before use
 							 }
 };
 
