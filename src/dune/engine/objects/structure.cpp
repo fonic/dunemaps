@@ -6,6 +6,8 @@
 
 cStructure::cStructure(  cHouse *pHouse, word pType, word pMapIndex, word pHealthPercent ) : cObject(pHouse, pMapIndex, pHealthPercent ) {
 
+	std::cout << "Creating structure: pType: " << pType << ", pHouse: " << pHouse->houseIDGet() << ", pMapIndex: " << pMapIndex << ", pHealth: " << pHealthPercent << std::endl; 
+
 	_buildingItemIndex = 0;
 	_frame = _frames = 0;
 	_foundationTiles = _tileCount = 0;
@@ -26,7 +28,10 @@ cStructure::cStructure(  cHouse *pHouse, word pType, word pMapIndex, word pHealt
 }
 
 cStructure::~cStructure() {
-	mapTilesSetup( true );
+	std::cout << "Deleting structure: pType: " << typeGet() << ", pHouse: " << houseGet()->houseIDGet() << ", pMapIndex: " << mapIndexGet() << ", pHealth: " << healthGet() << std::endl;
+	
+	if(mapIndexGet() != 0xFFFF) // check if structure actually is on map before trying to remove structure from map
+		mapTilesSetup( true );  // destructor was dormant before; now that it is active, it would crash here without above check
 }
 
 void cStructure::frameLoad() {

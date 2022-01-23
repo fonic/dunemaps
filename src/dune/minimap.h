@@ -9,7 +9,8 @@ private:
 public:
 
 					 cMinimap( );
-					~cMinimap();
+	//				~cMinimap();
+	virtual			~cMinimap();
 
 
 			bool	 positionUpdate();

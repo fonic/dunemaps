@@ -35,6 +35,8 @@ vector<string> splitStr( string pStr ) {
 }
 
 cScenario::cScenario(  )  {
+	std::cout << "Creating scenario" << std::endl;
+	
 	_mapGenerator = 0;
 	_map = 0;
 
@@ -51,6 +53,8 @@ cScenario::cScenario(  )  {
 
 
 cScenario::~cScenario() {
+	std::cout << "Deleting scenario: _mapSeed: " << _mapSeed << std::endl;
+	
 	clear();
 
 	delete _map;

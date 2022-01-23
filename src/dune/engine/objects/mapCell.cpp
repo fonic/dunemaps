@@ -10,6 +10,8 @@
 
 cMapCell::cMapCell(  word pMapIndex ) : cObject( 0, pMapIndex, 0 ) {
 
+	//std::cout << "Creating map cell: pMapIndex: " << pMapIndex << std::endl; 
+
 	tileMapLoad();
 
 	// No temp (eg. structure tile)
@@ -20,7 +22,7 @@ cMapCell::cMapCell(  word pMapIndex ) : cObject( 0, pMapIndex, 0 ) {
 }
 
 cMapCell::~cMapCell() {
-
+	//std::cout << "Deleting map cell: pMapIndex: " << mapIndexGet() << std::endl; 
 }
 
 void cMapCell::tileMapLoad() {

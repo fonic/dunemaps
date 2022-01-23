@@ -15,6 +15,8 @@
 #include <typeinfo>
 
 cScreenPlayfield::cScreenPlayfield( ) {
+	std::cout << "Creating screenplayfield" << std::endl;
+	
 	word Tactical = g_DuneEngine->scenarioGet()->mapTacticalGet();
 		
 	_mapX = g_DuneEngine->scenarioGet()->mapGet()->posXFromIndex( Tactical );
@@ -35,6 +37,7 @@ cScreenPlayfield::cScreenPlayfield( ) {
 }
 
 cScreenPlayfield::~cScreenPlayfield() {
+	std::cout << "Deleting screenplayfield" << std::endl;
 	
 	delete _surfaceLandscape;
 	delete _surfaceUnits;

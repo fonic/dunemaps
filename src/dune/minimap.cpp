@@ -6,11 +6,15 @@
 #include "screenPlayfield.h"
 
 cMinimap::cMinimap( ) {
+	std::cout << "Creating minimap" << std::endl;
+	
 	_surfaceAreaFrame = 0;
 	_mapX = _mapY = 0;
 }
 
 cMinimap::~cMinimap() {
+	std::cout << "Deleting minimap" << std::endl;
+	
 	SDL_FreeSurface( _surfaceAreaFrame );
 }
 

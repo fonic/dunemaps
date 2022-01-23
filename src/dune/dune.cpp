@@ -20,7 +20,8 @@ cDune::cDune( string pDataPath ) {
 	_screenPlayfield = 0;
 
 	_scenario = 0;
-	_minimap = new cMinimap();
+	//_minimap = new cMinimap(); // not needed, will be allocated by 'cDune::scenarioLoad()' before use
+	_minimap = 0;
 
 	mPlaceObject = 0;
 }

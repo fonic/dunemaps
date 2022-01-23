@@ -31,7 +31,7 @@ cObject::cObject( cHouse *pHouse, word pMapIndex, word pHealth) {
 }
 
 cObject::~cObject() {
-	delete _surface;
+	//delete _surface; // does not make sense here; only used/allocated by derived class 'cUnit'; moved to 'cUnit::~cUnit()'
 }
 
 void cObject::cycle() {

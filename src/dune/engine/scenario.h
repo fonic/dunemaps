@@ -49,7 +49,8 @@ protected:
 			
 public:
 								 cScenario( );												// Constructor
-								~cScenario();				// Destructor
+	//							~cScenario();				// Destructor
+	virtual						~cScenario();				// Destructor
 
 	void						 clear();
 

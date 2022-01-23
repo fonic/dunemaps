@@ -8,6 +8,8 @@
 
 cUnit::cUnit(  cHouse *pHouse, word pType, word pMapIndex, byte pAngle, word pAction, word pHealth  ) : cObject(pHouse, pMapIndex, pHealth) {
 
+	std::cout << "Creating unit: pType: " << pType << ", pHouse: " << pHouse->houseIDGet() << ", pMapIndex: " << pMapIndex << ", pAngle: " << unsigned(pAngle) << ", pAction: " << pAction << ", pHealth: " << pHealth << std::endl; 
+	
 	_surface = new cVideoSurface( 32, 32 );
 	_surface->colorKeySet( 0xFF );
 
@@ -28,9 +30,13 @@ cUnit::cUnit(  cHouse *pHouse, word pType, word pMapIndex, byte pAngle, word pAc
 }
 
 cUnit::~cUnit() {
+	std::cout << "Deleting unit: pType: " << typeGet() << ", pHouse: " << houseGet()->houseIDGet() << ", pMapIndex: " << mapIndexGet() << ", pAction: " << _actionCurrent << ", pHealth: " << healthGet() << std::endl; 
 
-	if(mapIndexGet())
+	//if(mapIndexGet()) // destructor was dormant before; now that it is active, it would crash below
+	if(mapIndexGet() != 0xFFFF) // check if unit actually is on map before trying to remove unit from map
 		(*mapCellGet())->objectEnter( 0 );
+	
+	delete _surface; // moved here from 'cObject::~cObject()'
 }
 
 void cUnit::cycle() {

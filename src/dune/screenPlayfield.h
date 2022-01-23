@@ -31,7 +31,8 @@ private:
 public:
 
 						 cScreenPlayfield();
-						~cScreenPlayfield();
+	//					~cScreenPlayfield();
+	virtual				~cScreenPlayfield();
 
 			void		 screenPrep();
 	virtual void		 draw( cVideoSurface *pSurface );

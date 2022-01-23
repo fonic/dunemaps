@@ -21,7 +21,8 @@ protected:
 public:
 					 cObject( cHouse *pHouse, word pX, word pY, word pHealth);
 					 cObject( cHouse *pHouse, word pMapIndex, word pHealth);
-					~cObject();
+	//				~cObject();
+	virtual			~cObject();
 
 	virtual void	 cycle();
 	virtual void	 draw();
