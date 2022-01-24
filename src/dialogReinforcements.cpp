@@ -17,7 +17,7 @@
 //Do not add custom headers
 //wxDev-C++ designer will remove them
 ////Header Include Start
-#include "Images/Self_cDialogReinforcements_XPM.xpm"
+#include "images/icon_cDialogReinforcements.xpm"
 ////Header Include End
 
 //----------------------------------------------------------------------------
@@ -102,7 +102,7 @@ void cDialogReinforcements::CreateGUIControls()
 	WxListCtrl1->InsertColumn(0,wxT("House"),wxLIST_FORMAT_LEFT,100 );
 
 	SetTitle(wxT("DuneMaps - Reinforcements"));
-	SetIcon(Self_cDialogReinforcements_XPM);
+	SetIcon(icon_cDialogReinforcements);
 	SetSize(8,8,474,277);
 	Center();
 	

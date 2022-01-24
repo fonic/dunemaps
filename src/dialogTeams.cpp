@@ -18,7 +18,7 @@
 //Do not add custom headers
 //wxDev-C++ designer will remove them
 ////Header Include Start
-#include "Images/Self_cDialogTeams_XPM.xpm"
+#include "images/icon_cDialogTeams.xpm"
 ////Header Include End
 
 //----------------------------------------------------------------------------
@@ -102,7 +102,7 @@ void cDialogTeams::CreateGUIControls()
 	WxListCtrl1->InsertColumn(0,wxT("House"),wxLIST_FORMAT_LEFT,100 );
 
 	SetTitle(wxT("DuneMaps - Teams"));
-	SetIcon(Self_cDialogTeams_XPM);
+	SetIcon(icon_cDialogTeams);
 	SetSize(8,8,479,287);
 	Center();
 	

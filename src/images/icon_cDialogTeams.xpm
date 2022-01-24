@@ -1,6 +1,6 @@
 /* XPM */
-static const char *Self_cDialogTeams_XPM[]={
-/* Self_cDialogTeams */
+static const char *icon_cDialogTeams[]={
+/* icon_cDialogTeams */
 "32 32 686 2",
 "      c None",
 " 0    c #47432F",

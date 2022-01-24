@@ -17,7 +17,7 @@
 //Do not add custom headers
 //wxDev-C++ designer will remove them
 ////Header Include Start
-#include "Images/Self_cDialogBasics_XPM.xpm"
+#include "images/icon_cDialogBasics.xpm"
 ////Header Include End
 
 //----------------------------------------------------------------------------
@@ -156,7 +156,7 @@ void cDialogBasics::CreateGUIControls()
 	mButtonCancel = new wxButton(this, ID_MBUTTONCANCEL, wxT("Cancel"), wxPoint(219, 290), wxSize(69, 22), 0, wxDefaultValidator, wxT("mButtonCancel"));
 
 	SetTitle(wxT("DuneMaps - Scenario Basics"));
-	SetIcon(Self_cDialogBasics_XPM);
+	SetIcon(icon_cDialogBasics);
 	SetSize(8,8,439,352);
 	Center();
 	

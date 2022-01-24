@@ -20,7 +20,7 @@
 //Do not add custom headers
 //wxDev-C++ designer will remove them
 ////Header Include Start
-#include "Images/Self_cDialogNewScenario_XPM.xpm"
+#include "images/icon_cDialogNewScenario.xpm"
 ////Header Include End
 
 //----------------------------------------------------------------------------
@@ -78,7 +78,7 @@ void cDialogNewScenario::CreateGUIControls()
 	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, wxT("Map Seed"), wxPoint(32, 28), wxDefaultSize, 0, wxT("WxStaticText1"));
 
 	SetTitle(wxT("DuneMaps - New Scenario"));
-	SetIcon(Self_cDialogNewScenario_XPM);
+	SetIcon(icon_cDialogNewScenario);
 	SetSize(8,8,274,170);
 	Center();
 	

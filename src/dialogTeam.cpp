@@ -15,7 +15,7 @@
 //Do not add custom headers
 //wxDev-C++ designer will remove them
 ////Header Include Start
-#include "Images/Self_cDialogTeam_XPM.xpm"
+#include "images/icon_cDialogTeam.xpm"
 ////Header Include End
 
 //----------------------------------------------------------------------------
@@ -102,7 +102,7 @@ void cDialogTeam::CreateGUIControls()
 	mChoiceHouse->SetSelection(-1);
 
 	SetTitle(wxT("DuneMaps - Team"));
-	SetIcon(Self_cDialogTeam_XPM);
+	SetIcon(icon_cDialogTeam);
 	SetSize(8,8,271,207);
 	Center();
 	

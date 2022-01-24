@@ -1,6 +1,6 @@
 /* XPM */
-static const char *Self_cDialogHouses_XPM[]={
-/* Self_cDialogHouses */
+static const char *icon_cDialogHouses[]={
+/* icon_cDialogHouses */
 "32 32 686 2",
 "      c None",
 " 0    c #47432F",

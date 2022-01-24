@@ -1,6 +1,6 @@
 /* XPM */
-static const char *Self_cDialogBasics_XPM[]={
-/* Self_cDialogBasics */
+static const char *icon_cDialogBasics[]={
+/* icon_cDialogBasics */
 "32 32 686 2",
 "      c None",
 " 0    c #47432F",

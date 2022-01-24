@@ -1,6 +1,6 @@
 /* XPM */
-static const char *Self_cFrameDuneMaps_XPM[]={
-/* Self_cFrameDuneMaps */
+static const char *icon_cFrameDuneMaps[]={
+/* icon_cFrameDuneMaps */
 "32 32 686 2",
 "      c None",
 " 0    c #47432F",

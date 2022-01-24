@@ -34,7 +34,7 @@ const char *SVNDATE = "$WCDATE$";
 //Do not add custom headers
 //wxDev-C++ designer will remove them
 ////Header Include Start
-#include "Images/Self_cFrameDuneMaps_XPM.xpm"
+#include "images/icon_cFrameDuneMaps.xpm"
 ////Header Include End
 
 //----------------------------------------------------------------------------
@@ -182,7 +182,7 @@ void cFrameDuneMaps::CreateGUIControls()
 	WxToolBar1->Realize();
 	SetToolBar(WxToolBar1);
 	SetTitle(wxT("Dune Maps"));
-	SetIcon(Self_cFrameDuneMaps_XPM);
+	SetIcon(icon_cFrameDuneMaps);
 	SetSize(wxSize(1024,768));
 	
 	////GUI Items Creation End
