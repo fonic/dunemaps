@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------------
 #                                                                         -
 #  Created by Fonic <https://github.com/fonic>                            -
-#  Date: 01/19/22 - 01/21/22                                              -
+#  Date: 01/19/22 - 01/24/22                                              -
 #                                                                         -
 #  Based on (amonst various other sources):                               -
 #  https://github.com/pragmaticlinuxblog/cmake_wxwidgets                  -
@@ -81,6 +81,9 @@ set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Og -g -ggdb -fsanitize=address 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og -g -ggdb -fsanitize=address -fno-omit-frame-pointer")
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -s")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -s")
+# Additions for debug builds to suppress less relevant warnings
+#set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Wno-unused-variable -Wno-unused-function -Wno-unused-parameter -Wno-unused-but-set-variable")
+#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wno-unused-variable -Wno-unused-function -Wno-unused-parameter -Wno-unused-but-set-variable")
 
 # Find wxWidgets library
 find_package(wxWidgets COMPONENTS core base xrc REQUIRED)
