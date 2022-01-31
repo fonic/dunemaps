@@ -68,7 +68,8 @@ void cScenarioAmiga::iniLoad( string pFile, bool pLocalFile ) {
 
 	}
 
-	delete fileBuffer;
+	//delete fileBuffer;
+	delete [] fileBuffer;
 }
 
 string cScenarioAmiga::get_string( byte **pBuffer ) {
