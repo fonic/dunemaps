@@ -18,6 +18,7 @@
 #include "dialogReinforcements.h"
 #include "dialogNewScenario.h"
 #include "dialogChoam.h"
+#include "versionInfo.h"
 
 #include "dune/stdafx.h"
 #include "dune/engine/objects/object.h"
@@ -27,9 +28,6 @@
 #include "dune/engine/scenario.h"
 
 #include <algorithm>
-//#include "../rev.h"
-const char *SVNREV = "$WCREV$";
-const char *SVNDATE = "$WCDATE$";
 
 //Do not add custom headers
 //wxDev-C++ designer will remove them
@@ -88,12 +86,7 @@ cFrameDuneMaps::cFrameDuneMaps(wxWindow *parent, wxWindowID id, const wxString &
 	mMinimapLock = true;
 	mScensFromPak = 1;
 
-	string windowTitle = "Dune Maps (SVN:";
-	windowTitle.append( SVNREV );
-	windowTitle.append( " - " );
-	windowTitle.append( SVNDATE );
-	windowTitle.append( ")");
-
+	string windowTitle = "DuneMaps (" + VERSION_NUMBER + " - " + VERSION_DATE + ")";
 	SetTitle( wxString(windowTitle.c_str(), wxConvUTF8) );
 
 	// Prepare the tool bars and the PAK load menu
@@ -181,7 +174,7 @@ void cFrameDuneMaps::CreateGUIControls()
 
 	WxToolBar1->Realize();
 	SetToolBar(WxToolBar1);
-	SetTitle(wxT("Dune Maps"));
+	SetTitle(wxT("DuneMaps"));
 	SetIcon(icon_cFrameDuneMaps);
 	SetSize(wxSize(1024,768));
 	

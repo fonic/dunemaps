@@ -47,7 +47,7 @@ class cFrameDuneMaps : public wxFrame
 		size_t				 mScensFromPak;
 
 	public:
-		cFrameDuneMaps(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("Dune Maps"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize );
+		cFrameDuneMaps(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("DuneMaps"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize );
 		virtual ~cFrameDuneMaps();
 
 		void Mnuquit1006Click(wxCommandEvent& event);

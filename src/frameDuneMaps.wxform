@@ -3,7 +3,7 @@ object frmNewForm_3: TfrmNewForm
   Top = 8
   AutoScroll = False
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = 'Dune Maps'
+  Caption = 'DuneMaps'
   ClientHeight = 512
   ClientWidth = 740
   Color = clAppWorkSpace
