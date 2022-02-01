@@ -12,6 +12,7 @@
 #include<fstream>
 
 #include "../../panelSurface.h"
+#include "../../versionInfo.h"
 
 vector<string> splitStr( string pStr ) {
 	vector<string> res;
@@ -424,6 +425,9 @@ void cScenario::iniSave( string pFile ) {
 	//delete buffer;
 	delete [] buffer;
 
+	// Header comment
+	ini.setHeaderComment("Scenario created by DuneMaps (" + VERSION_NUMBER + " - " + VERSION_DATE + ")");
+	
 	// [BASIC] Section
 	ini.setStringValue("BASIC", "LosePicture", _pictureLose );
 	ini.setStringValue("BASIC", "WinPicture", _pictureWin );

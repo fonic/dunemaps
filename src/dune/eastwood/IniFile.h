@@ -99,6 +99,9 @@ public:
 	void setIntValue(std::string section, std::string key, int value);
 	void setBoolValue(std::string section, std::string key, bool value);
 	
+	std::string getHeaderComment();
+	bool setHeaderComment(std::string comment);
+	
 	KeyListHandle KeyList_Open(std::string sectionname);
 	bool KeyList_EOF(KeyListHandle handle);
 	std::string KeyList_GetNextKey(KeyListHandle *handle);

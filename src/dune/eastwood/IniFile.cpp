@@ -340,6 +340,36 @@ void IniFile::setBoolValue(std::string section, std::string key, bool value)
 	}
 }
 
+/// Returns the header comment line
+/**
+	Returns the header comment line (if available)
+	\return	Header comment line (string) or "" if not available
+*/
+std::string IniFile::getHeaderComment()
+{
+	// NOTE: this is just a quick hack: due to 'IniFile::IniFile()' -> 'readfile()'
+	//       -> code leading up to '// empty line or comment', there is always an
+	//       initial, empty and unused 'CommentEntry' object present; thus, we use
+	//       that to store the comment
+	if (FirstLine == NULL)
+		return "";
+	return FirstLine->CompleteLine;
+}
+
+/// Sets header comment line
+/**
+	Sets header comment line (if possible)
+	\param	comment	Header comment line to set (string)
+	\return	True if header comment line was set, otherwise false
+*/
+bool IniFile::setHeaderComment(std::string comment)
+{
+	if (FirstLine == NULL)
+		return false;
+	FirstLine->CompleteLine = "; " + comment;
+	return true;
+}
+
 /// Opens a IniFile::KeyListHandle.
 /**
 	A IniFile::KeyListHandle can be used to list all keys of one section. This method opens the #IniFile::KeyListHandle.
@@ -451,14 +481,13 @@ bool IniFile::SaveChangesTo(SDL_RWops *file) {
 			error = true;
 		curEntry = curEntry->nextEntry;
 	}*/
-	bool first_line = true;
 	bool error = false;
 	unsigned int written;
 	for( ; curEntry != NULL; curEntry = curEntry->nextEntry) {
 		if(curEntry->CompleteLine == "") // skip empty lines
 			continue;
 
-		if(!first_line && curEntry->CompleteLine.rfind("[", 0) == 0) // insert empty line before section start
+		if(curEntry->CompleteLine.rfind("[", 0) == 0) // insert empty line before section start
 			if((written = SDL_RWwrite(file,"\r\n",2,1)) != 1)
 				error = true;
 
@@ -468,8 +497,6 @@ bool IniFile::SaveChangesTo(SDL_RWops *file) {
 
 		if((written = SDL_RWwrite(file,"\r\n",2,1)) != 1)
 			error = true;
-
-		first_line = false;
 	}
 
 	return !error;
