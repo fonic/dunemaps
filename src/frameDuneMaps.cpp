@@ -197,7 +197,7 @@ void cFrameDuneMaps::CreateGUIControls()
 	SetMinSize( wxSize(756, 550) );
 
 	//WxToolBar2 = new wxToolBar(this, ID_WXTOOLBAR2, wxPoint(0, 460), wxSize(800, 28), wxTB_BOTTOM);
-	WxToolBar2 = new wxToolBar(this, ID_WXTOOLBAR2, wxPoint(0, 460), wxSize(GetSize().GetWidth(), 56), wxTB_BOTTOM);
+	WxToolBar2 = new wxToolBar(this, ID_WXTOOLBAR2, wxPoint(0, 460), wxSize(GetSize().GetWidth(), 48), wxTB_BOTTOM);
 	WxToolBar2->Realize();
 
 	mMinimap->Show();
