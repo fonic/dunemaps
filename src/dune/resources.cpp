@@ -108,12 +108,12 @@ void cResources::resourcePrepare() {
 	
 	_Exe = new cResourceExe( "DUNE2.EXE" );
 	if(!_Exe->isOpen()) {
-		wxMessageBox("DUNE2.EXE not found in data directory!", "Data not found");
+		wxMessageBox("Loading EXE failed, please check data directory for the following file:\n\nDUNE2.EXE", "Missing data file");
 		exit(0);
 	}
 
 	if(!pakLoad()) {
-		wxMessageBox("Loading PAKs' failed, please check data directory for the following files\n\nDUNE2.PAK\nENGLISH.PAK\nSCENARIO.PAK", "Data not found");
+		wxMessageBox("Loading PAKs failed, please check data directory for the following files:\n\nDUNE.PAK\nENGLISH.PAK\nSCENARIO.PAK", "Missing data file");
 		exit(0);
 	}
 
@@ -163,6 +163,7 @@ byte *cResources::fileRead( string pFile, size_t	&pFileSize, bool pData ) {
 		}*/
 		fileStream->read( (char*) fileBuffer, pFileSize );
 		if (fileStream->fail()) {
+			std::cout << "Failed loading file: " << filePathFinal.str() << std::endl;
 			delete [] fileBuffer;
 			fileBuffer = 0;
 		}
@@ -497,8 +498,10 @@ bool cResources::pakLoad() {
 	for( size_t i = 0; i < 0x03; ++i ) {
 		string filename = loadPaks[i];
 
-		if(!pakLoad( filename, true ))
+		if(!pakLoad( filename, true )) {
+			std::cout << "Failed loading file: " << filename << std::endl;
 			return false;
+		}
 	}
 
 	return true;
@@ -546,6 +549,7 @@ string *cResources::fileRead( string pFilename) {
 	map< string, PakFile*>::iterator	pakIT;
 
 	// Iterate over each PAK looking for 'filename'
+	std::cout << "Loading file: " << pFilename << " (from PAK)" << std::endl;
 	for( pakIT = _Paks.begin(); pakIT != _Paks.end(); ++pakIT ) {
 
 		pak = pakIT->second;
@@ -761,7 +765,6 @@ void cResources::shpLoad( string pFileName ) {
 	string			 st = *str;
 	istringstream	 is(st);
 
-	std::cout << "Loading file: " << pFileName << std::endl;
 	//_shp = new ShpFile( is ,  _paletteIBM->getPalette() );
 	_shp = new ShpFile( is, _palIBM );
 
