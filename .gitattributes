@@ -1,0 +1,9 @@
+# Normalize line endings to LF for text files
+#
+# To verify, use (third column should read 'attr/text=auto'):
+# git ls-files --eol
+#
+# Based on:
+# https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/#a-simple-gitattributes-config
+
+* text=auto
