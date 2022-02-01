@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------------
 #                                                                         -
 #  Created by Fonic <https://github.com/fonic>                            -
-#  Date: 01/19/22 - 01/24/22                                              -
+#  Date: 01/19/22 - 02/01/22                                              -
 #                                                                         -
 #  Based on (amonst various other sources):                               -
 #  https://github.com/pragmaticlinuxblog/cmake_wxwidgets                  -
@@ -12,7 +12,7 @@
 cmake_minimum_required(VERSION 3.7)
 
 # Specify project name (also executable name)
-project(dunemaps-linux C CXX)
+project(dunemaps C CXX)
 
 # Specify source files
 set(

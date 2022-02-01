@@ -519,6 +519,6 @@ void cFrameDuneMaps::Mnuchoam4017Click(wxCommandEvent& event) {
  */
 void cFrameDuneMaps::Mnuabout1008Click(wxCommandEvent& event) {
 
-	wxMessageBox(wxT("DuneMaps\n\nhttp://dunemaps.sourceforge.net\nCopyright 2009-2010 Robert Crossfield\n\nLibEastwood\nCopyright 2009-2010 Per Oyvind Karlsen\n"), wxT("About"));
+	wxMessageBox(wxT("DuneMaps\nhttp://dunemaps.sourceforge.net\nCopyright 2009-2010 Robert Crossfield\n\nLibEastwood\nCopyright 2009-2010 Per Oyvind Karlsen\n\nDuneMaps (Fork)\nCopyright 2022 Fonic <https://github.com/fonic>"), wxT("DuneMaps - About"));
 
 }

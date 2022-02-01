@@ -4,6 +4,6 @@
 #include <string>
 
 const std::string VERSION_NUMBER = "r68";
-const std::string VERSION_DATE = "01/31/22";
+const std::string VERSION_DATE   = "02/01/22";
 
 #endif // MAIN_VERSIONINFO_H
