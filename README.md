@@ -1,7 +1,13 @@
-# DuneMaps - Scenario Editor for Dune II
+# DuneMaps - Scenario Editor for Dune II (Linux Port)
 
-**Forked from:**<br/>
+**Forked and ported to Linux from:**<br/>
 https://sourceforge.net/projects/dunemaps/
+
+## Donations
+
+I'm striving to become a full-time developer of [Free and open-source software (FOSS)](https://en.wikipedia.org/wiki/Free_and_open-source_software). Donations help me achieve that goal and are highly appreciated.
+
+<a href="https://www.buymeacoffee.com/fonic"><img src="https://raw.githubusercontent.com/fonic/donate-buttons/main/buymeacoffee-button.png" alt="Buy Me A Coffee" height="35"></a>&nbsp;&nbsp;&nbsp;<a href="https://paypal.me/fonicmaxxim"><img src="https://raw.githubusercontent.com/fonic/donate-buttons/main/paypal-button.png" alt="Donate via PayPal" height="35"></a>
 
 ## Screenshot
 
@@ -144,4 +150,6 @@ saved based on the current editor view/selected structure.
 At present only saving in PC INI format is supported.
 ```
 
-<br/>_Last updated: 02/01/22_
+##
+
+_Last updated: 08/09/23_
